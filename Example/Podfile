@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MGScrollPageView_Example' do
+  pod 'MGScrollPageView', :path => '../'
+
+  target 'MGScrollPageView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
