@@ -386,10 +386,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MGScrollPageView_Example/Pods-MGScrollPageView_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/MGScrollPageView/MGScrollPageView.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGScrollPageView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

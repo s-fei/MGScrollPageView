@@ -32,6 +32,8 @@ Pod::Spec.new do |s|
 
   s.source_files = 'MGScrollPageView/Classes/**/*'
   s.public_header_files = 'MGScrollPageView/Classes/**/*.h'
+
+  s.dependency 'SnapKit','~> 3.2.0'
   
   # s.resource_bundles = {
   #   'MGScrollPageView' => ['MGScrollPageView/Assets/*.png']
