@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MGScrollPageView'
-  s.version          = '0.0.3'
+  s.version          = '1.0.0'
   s.summary          = 'MGScrollPageView'
 
 # This description is used to generate tags and improve search results.
@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
   s.source_files = 'MGScrollPageView/Classes/**/*'
   s.public_header_files = 'MGScrollPageView/Classes/**/*.h'
 
-  s.dependency 'SnapKit','~> 3.2.0'
+  s.dependency 'SnapKit'
   
   # s.resource_bundles = {
   #   'MGScrollPageView' => ['MGScrollPageView/Assets/*.png']

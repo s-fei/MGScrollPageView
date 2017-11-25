@@ -1,7 +1,7 @@
 PODS:
-  - MGScrollPageView (0.0.1):
-    - SnapKit (~> 3.2.0)
-  - SnapKit (3.2.0)
+  - MGScrollPageView (1.0.0):
+    - SnapKit
+  - SnapKit (4.0.0)
 
 DEPENDENCIES:
   - MGScrollPageView (from `../`)
@@ -11,8 +11,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  MGScrollPageView: f5b46add25d48fafdecb336bd4033056c3a45f57
-  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  MGScrollPageView: 5677f510a19622eff93b32840dab8d56a8e234b7
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
 PODFILE CHECKSUM: 00309c872ff292720ca4196e51594d64e4b03b50
 
