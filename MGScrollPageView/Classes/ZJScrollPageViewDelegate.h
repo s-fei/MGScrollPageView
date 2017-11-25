@@ -36,7 +36,7 @@
  * -reuseViewController : 这个是返回给你的controller, 你应该首先判断这个是否为nil, 如果为nil 创建对应的控制器并返回, 如果不为nil直接使用并返回
  * -index : 对应的下标
  */
-- (UIViewController<ZJScrollPageViewChildVcDelegate> *)childViewController:(UIViewController<ZJScrollPageViewChildVcDelegate> *)reuseViewController forIndex:(NSInteger)index;
+- (UIViewController *)childViewController:(UIViewController *)reuseViewController forIndex:(NSInteger)index;
 
 @optional
 - (void)setUpTitleView:(ZJTitleView *)titleView forIndex:(NSInteger)index;

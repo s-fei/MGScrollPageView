@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MGScrollPageView
 
 // MARK: PageTableViewDelegate
 public protocol PageViewDelegate: class {

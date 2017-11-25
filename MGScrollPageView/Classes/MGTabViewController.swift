@@ -263,6 +263,15 @@ open class MGTabViewController: UIViewController {
 
 extension MGTabViewController: ZJScrollPageViewDelegate
 {
+    
+    public func setUp(_ titleView: ZJTitleView!, for index: Int) {
+        
+    }
+    
+    public func frameOfChildController(forContainer containerView: UIView!) -> CGRect {
+        return containerView.bounds
+    }
+    
     public func numberOfChildViewControllers() -> Int {
         return titles.count
     }
@@ -275,6 +284,7 @@ extension MGTabViewController: ZJScrollPageViewDelegate
         }
         return reuseViewController
     }
+    
     //
     //    func scrollPageController(scrollPageController: UIViewController!, contentScrollView scrollView: ZJCollectionView!, shouldBeginPanGesture panGesture: UIPanGestureRecognizer!) -> Bool {
     //        return true

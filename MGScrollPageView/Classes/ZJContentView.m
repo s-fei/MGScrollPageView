@@ -415,7 +415,7 @@ static NSString *const kContentOffsetOffKey = @"contentOffset";
     
     if (_delegate && [_delegate respondsToSelector:@selector(childViewController:forIndex:)]) {
         if (currentController == nil) {
-            currentController = [_delegate childViewController:nil forIndex:currentIndex];
+            currentController = (UIViewController<ZJScrollPageViewChildVcDelegate> *)[_delegate childViewController:nil forIndex:currentIndex];
             currentController.zj_currentIndex = currentIndex;
             [self.childVcsDic setValue:currentController forKey:[NSString stringWithFormat:@"%ld", (long)currentIndex]];
             
