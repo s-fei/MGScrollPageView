@@ -14,7 +14,7 @@ fileprivate let KScreenHeight = UIScreen.main.bounds.height
 
 // MARK:外部使用方法
 extension MGTabViewController{
-    public func reloadView(){
+     public func reloadView(){
         tableView.delegate = self
         tableView.dataSource = self
         if headView == nil || headView?.frame.size.height == 0  {
@@ -42,7 +42,7 @@ extension MGTabViewController{
      *  @param childViewController
      *  @param index
      */
-    open func scrollTabController(scrollPageController: UIViewController!, childViewControllWillAppear childViewController: UIViewController!, forIndex index: Int) {
+    @objc open func scrollTabController(scrollPageController: UIViewController!, childViewControllWillAppear childViewController: UIViewController!, forIndex index: Int) {
         
     }
     /**
@@ -52,19 +52,19 @@ extension MGTabViewController{
      *  @param childViewController
      *  @param index
      */
-    open func  scrollTabController(scrollPageController: UIViewController!, childViewControllDidAppear childViewController: UIViewController!, forIndex index: Int) {
+    @objc open func  scrollTabController(scrollPageController: UIViewController!, childViewControllDidAppear childViewController: UIViewController!, forIndex index: Int) {
         
     }
     
-    open func scrollTabController(scrollPageController: UIViewController!, childViewControllWillDisappear childViewController: UIViewController!, forIndex index: Int) {
+    @objc open func scrollTabController(scrollPageController: UIViewController!, childViewControllWillDisappear childViewController: UIViewController!, forIndex index: Int) {
         
     }
     
-    open func scrollTabController(scrollPageController: UIViewController!, childViewControllDidDisappear childViewController: UIViewController!, forIndex index: Int) {
+    @objc open func scrollTabController(scrollPageController: UIViewController!, childViewControllDidDisappear childViewController: UIViewController!, forIndex index: Int) {
         
     }
     
-    open func setUpTabTitleView(titleView: ZJTitleView!, forIndex index: Int){
+    @objc open func setUpTabTitleView(titleView: ZJTitleView!, forIndex index: Int){
         
     }
 }
