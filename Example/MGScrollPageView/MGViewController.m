@@ -7,6 +7,7 @@
 //
 
 #import "MGViewController.h"
+#import "MGScrollPageView_Example-Swift.h"
 
 @interface MGViewController ()
 
@@ -19,7 +20,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
-
+- (IBAction)buttonAction:(id)sender {
+    TabListViewController *textVC =  [[TabListViewController alloc] init];
+    [self.navigationController pushViewController:textVC animated:true];
+}
+    
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
