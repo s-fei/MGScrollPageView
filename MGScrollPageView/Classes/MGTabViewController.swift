@@ -452,10 +452,10 @@ extension MGTabViewController:UIScrollViewDelegate
 }
 
 
-public class MGCustomGestureTableView: UITableView {
+public class MGCustomGestureTableView: UITableView,UIGestureRecognizerDelegate {
     
     /// 返回true  ---- 能同时识别多个手势
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         let isGesture = (gestureRecognizer is UIPanGestureRecognizer) && (otherGestureRecognizer is UIPanGestureRecognizer)
         if isGesture {
             let panGesture = gestureRecognizer as! UIPanGestureRecognizer
@@ -471,7 +471,7 @@ public class MGCustomGestureTableView: UITableView {
         return false
     }
     
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer!, shouldReceiveTouch touch: UITouch!)->Bool{
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch)->Bool{
         if touch.view is UIButton {
             return false
         }
