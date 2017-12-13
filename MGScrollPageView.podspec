@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MGScrollPageView'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = 'MGScrollPageView'
 
 # This description is used to generate tags and improve search results.
@@ -30,10 +30,24 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'MGScrollPageView/Classes/**/*'
-  s.public_header_files = 'MGScrollPageView/Classes/**/*.h'
 
-  s.dependency 'SnapKit'
+  s.default_subspec = 'PageView'
+
+  s.subspec 'PageView' do |pageView|
+    pageView.source_files = 'MGScrollPageView/Classes/MGScrollPageView/**/*'
+    pageView.public_header_files = 'MGScrollPageView/Classes/MGScrollPageView/**/*.h'
+    pageView.dependency 'SnapKit'
+  end
+
+  s.subspec 'Extension' do |extension|
+    extension.source_files = 'MGScrollPageView/Classes/MGRxPage/*.{swift,m,h}'
+    extension.dependency 'MGScrollPageView/PageView'
+    extension.dependency 'RxCocoa'
+  end
+
+
+  
+
   
   # s.resource_bundles = {
   #   'MGScrollPageView' => ['MGScrollPageView/Assets/*.png']
