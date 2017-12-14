@@ -10,11 +10,11 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-open class MGRXPageViewController: UIViewController {
+open class MGRXPageViewController: PageViewController {
     
     let pageDisposeBag = DisposeBag()
     // 代理
-    public var scrollView:UIScrollView? {
+    open override var scrollView:UIScrollView? {
         didSet{
             guard let `scrollView` = scrollView else { return }
             scrollView.rx
@@ -28,16 +28,7 @@ open class MGRXPageViewController: UIViewController {
     
     override open func viewDidLoad() {
         super.viewDidLoad()
-        automaticallyAdjustsScrollViewInsets = false
     }
-    
-    public weak var delegate: PageViewDelegate?
-}
-
-
-extension MGRXPageViewController: ZJScrollPageViewChildVcDelegate {
-    
-    
 }
 
 extension Reactive where Base : MGRXPageViewController {
@@ -50,3 +41,4 @@ extension Reactive where Base : MGRXPageViewController {
         })
     }
 }
+

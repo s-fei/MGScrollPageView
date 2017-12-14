@@ -12,6 +12,8 @@ import SnapKit
 fileprivate let KScreenWidth = UIScreen.main.bounds.width
 fileprivate let KScreenHeight = UIScreen.main.bounds.height
 
+fileprivate let NavBarHeight:CGFloat = (UIScreen.main.bounds.height == 812) ? 88:64
+
 // MARK:外部使用方法
 extension MGTabViewController{
      public func reloadView(){
@@ -152,7 +154,7 @@ open class MGTabViewController: UIViewController {
     public lazy var contentViewFrame: CGRect! = {[unowned self] in
         // 注意, 如果tableview是在storyboard中来的, 设置contentView的高度和这里不一样
         let hotHeight = self.keepTab ? self.style.segmentHeight: 0
-        var frame = CGRect(x: 0, y: 0, width: KScreenWidth, height: KScreenHeight - hotHeight - 64)
+        var frame = CGRect(x: 0, y: 0, width: KScreenWidth, height: KScreenHeight - hotHeight - NavBarHeight)
         return frame
         }()
     
