@@ -34,7 +34,14 @@ typedef void(^ExtraBtnOnClick)(UIButton *extraBtn);
 - (void)adjustTitleOffSetToCurrentIndex:(NSInteger)currentIndex;
 /** 设置选中的下标*/
 - (void)setSelectedIndex:(NSInteger)index animated:(BOOL)animated;
-/** 重新刷新标题的内容*/
+
+/** 重新刷新标题的内容 会移除以前的subView*/
 - (void)reloadTitlesWithNewTitles:(NSArray *)titles;
+
+/** 刷新单个标题 只刷新文字*/
+- (void)reloadTitle:(NSString *)title withIndex:(NSInteger)index ;
+
+/** 刷新所有标题 只刷新文字  必须一一对应*/
+- (void)reloadTitles:(NSArray *)titles;
 
 @end

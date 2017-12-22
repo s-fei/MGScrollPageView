@@ -770,7 +770,20 @@ static CGFloat const contentSizeXOff = 20.0;
     return rgbComponents;
     
 }
+- (void)reloadTitle:(NSString *)title withIndex:(NSInteger)index {
+    if (self.titleViews.count > index) {
+        ZJTitleView *titleView = self.titleViews[index];
+        titleView.text = title;
+    }
+}
 
+- (void)reloadTitles:(NSArray *)titles {
+    if (self.titleViews.count == titles.count) {
+        [self.titleViews enumerateObjectsUsingBlock:^(ZJTitleView  *titleView, NSUInteger idx, BOOL * _Nonnull stop) {
+            titleView.text = titles[idx];
+        }];
+    }
+}
 
 @end
 
