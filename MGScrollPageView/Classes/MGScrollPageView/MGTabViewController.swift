@@ -28,8 +28,8 @@ extension MGTabViewController{
         }
         tableView.tableHeaderView = headView
         tableView.reloadData()
+//        contentView.reload()
         segmentView.reloadTitles(withNewTitles: titles)
-          contentView.reload()
     }
     
     /*! 设置选中哪个 */
