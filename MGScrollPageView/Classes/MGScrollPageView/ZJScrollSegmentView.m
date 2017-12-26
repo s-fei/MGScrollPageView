@@ -779,9 +779,19 @@ static CGFloat const contentSizeXOff = 20.0;
 
 - (void)reloadTitles:(NSArray *)titles {
     if (self.titleViews.count == titles.count) {
-        [self.titleViews enumerateObjectsUsingBlock:^(ZJTitleView  *titleView, NSUInteger idx, BOOL * _Nonnull stop) {
-            titleView.text = titles[idx];
-        }];
+        [self.scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+        
+        self.titleWidths = nil;
+        self.titleViews = nil;
+        self.titles = nil;
+        self.titles = [titles copy];
+        if (self.titles.count == 0) return;
+        for (UIView *subview in self.subviews) {
+            [subview removeFromSuperview];
+        }
+        [self setupSubviews];
+        [self setupUI];
+        [self setSelectedIndex:_currentIndex animated:YES];
     }
 }
 
