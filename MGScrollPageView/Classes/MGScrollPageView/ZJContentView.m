@@ -327,6 +327,7 @@ static NSString *const kContentOffsetOffKey = @"contentOffset";
 - (void)adjustSegmentTitleOffsetToCurrentIndex:(NSInteger)index {
     if(self.segmentView) {
         [self.segmentView adjustTitleOffSetToCurrentIndex:index];
+        [self.segmentView setSelectedIndex:index animated:false];
     }
     
 }

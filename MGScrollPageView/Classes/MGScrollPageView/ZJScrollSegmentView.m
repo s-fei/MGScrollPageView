@@ -791,7 +791,7 @@ static CGFloat const contentSizeXOff = 20.0;
         }
         [self setupSubviews];
         [self setupUI];
-        [self setSelectedIndex:_currentIndex animated:YES];
+        [self setSelectedIndex:_currentIndex animated:NO];
     }
 }
 
