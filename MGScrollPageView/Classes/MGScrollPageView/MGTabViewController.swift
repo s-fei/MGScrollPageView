@@ -158,7 +158,11 @@ open class MGTabViewController: UIViewController {
         return frame
         }()
     
-    public var tableViewScrollEnabled = true
+    public var tableViewScrollEnabled = true {
+        didSet {
+            self.tableView.isScrollEnabled = tableViewScrollEnabled
+        }
+    }
     
     override open func viewDidLoad() {
         super.viewDidLoad()
