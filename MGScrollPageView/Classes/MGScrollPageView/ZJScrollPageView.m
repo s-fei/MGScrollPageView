@@ -69,8 +69,8 @@
     if (!_contentView) {
         ZJContentView *content = [[ZJContentView alloc] initWithFrame:CGRectMake(0.0, CGRectGetMaxY(self.segmentView.frame), self.bounds.size.width, self.bounds.size.height - CGRectGetMaxY(self.segmentView.frame)) segmentView:self.segmentView parentViewController:self.parentViewController delegate:self.delegate];
         [self addSubview:content];
-        [self layoutSubviews];
         _contentView = content;
+        [self layoutSubviews];
     }
     
     return  _contentView;
@@ -92,8 +92,8 @@
             
         }];
         [self addSubview:segment];
-        [self layoutSubviews];
         _segmentView = segment;
+        [self layoutSubviews];
     }
     return _segmentView;
 }
